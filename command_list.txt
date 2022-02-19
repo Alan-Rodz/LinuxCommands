@@ -1,0 +1,58 @@
+List process listening on particular port:
+sudo lsof -i :portnumber
+i.e. sudo lsof -i :3000
+
+Send SIGTERM (9) through kill to PID:
+kill -9 {PID}
+i.e. kill -9 123456
+
+Create Symlink to File 
+ln -s source_file symbolic_link
+
+Create Symlikn to Directory (from, to)
+ln -s /mnt/HDD ~
+
+See ports that are doing something
+netstat -tulpn
+
+Clear Trash (in ~/.local/share/Trash/)
+rm -rf *
+
+Add an alias (add to .bashrc)
+alias aliasname="commands"
+
+Installing a program from AUR (Arch)
+- Download the snapshot from AUR
+- Copy into ~
+- tar -xf file.tar.gz
+- cd file
+- makepkg -sic
+
+Install Java
+sudo pacman -S jre-openjdk
+sudo pacman -S jdk-openjdk
+
+Setting up OpenDNS (Arch - NetworkManager)
+From the Arch Wiki:
+vim /etc/NetworkManager/conf.d/dns-servers.conf
+Type the following:
+[global-dns-domain-*]
+servers=OpenDNSServer1,OpenDNSServer2
+Then we do: systemctl restart NetworkManager.service
+
+List network interfaces: 
+ifconfig -a  -> old way
+ip link show -> new way 
+
+List wifi networks  
+nmcli device wifi list (Arch - NetworkManager)
+
+Connect to WiFi (Arch - NetworkManager)
+nmcli device wifi connect BSSID_OR_SSID password PASSWORD ifname NETWORK_INTERFACE
+
+Display content on Screen:
+xrandr --output HDMI-1-0 --auto:wq
+
+Passing files from Cellphone (through MTP - Media Transfer Protocol):
+sudo pacman -S android-file-transfer
+aft-mtp-mount
