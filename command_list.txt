@@ -53,6 +53,6 @@ nmcli device wifi connect BSSID_OR_SSID password PASSWORD ifname NETWORK_INTERFA
 Display content on Screen:
 xrandr --output HDMI-1-0 --auto:wq
 
-Passing files from Cellphone (through MTP - Media Transfer Protocol):
+Passing files from Cellphone (mounts phone and uses MTP - Media Transfer Protocol):
 sudo pacman -S android-file-transfer
 aft-mtp-mount
