@@ -56,3 +56,12 @@ xrandr --output HDMI-1-0 --auto:wq
 Passing files from Cellphone (mounts phone and uses MTP - Media Transfer Protocol):
 sudo pacman -S android-file-transfer
 aft-mtp-mount
+
+Reflector -- Update Mirror List
+reflector --verbose -l 200 -n 20 -p http --sort rate --save /etc/pacman.d/mirrorlist
+
+--verbose prints more information than normal
+-n 20 returns at most 20 mirrors
+-p http uses http instead of ftp
+--sort rate sorts by download rate
+--save ... overwrites my previous mirrorlist file
