@@ -1,3 +1,15 @@
+// ** Windows ****************************************************************************
+Manually format usb
+list disk
+select disk n
+clean
+create partition primary
+select partition 1
+active
+format fs=ntfs label="label" quick
+assign letter=LETTER
+
+// ** Linux ******************************************************************************
 List process listening on particular port:
 sudo lsof -i :portnumber
 i.e. sudo lsof -i :3000
