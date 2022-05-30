@@ -77,3 +77,12 @@ reflector --verbose -l 200 -n 20 -p http --sort rate --save /etc/pacman.d/mirror
 -p http uses http instead of ftp
 --sort rate sorts by download rate
 --save ... overwrites my previous mirrorlist file
+
+Mount USB
+sudo fdisk -l
+(see where the usb is mounted, e.g. /dev/sdb)
+mkdir /mnt/usb
+mount /dev/sdb /mnt/usb
+
+Unmount USB (using same example as above)
+umount /mnt/usb
